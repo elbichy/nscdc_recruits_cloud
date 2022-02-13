@@ -503,7 +503,7 @@
 								</form>
 							</div>
 							@endif
-							<table class="striped responsive-table centered highlight">
+							<table class="striped responsive-table highlight">
 								<thead>
 									<tr>
 										<th>Name</th>
@@ -674,7 +674,7 @@
 								</form>
 							</div>
 							@endif
-							<table class="striped responsive-table centered highlight">
+							<table class="striped responsive-table highlight">
 								<thead>
 									<tr>
 										<th>Name</th>
@@ -850,7 +850,7 @@
 								</form>
 							</div>
 							@endif
-							<table class="striped responsive-table centered highlight">
+							<table class="striped responsive-table highlight">
 								<thead>
 									<tr>
 										<th>Qualification</th>
@@ -1060,7 +1060,7 @@
 								</form>
 							</div>
 							@endif
-							<table class="striped responsive-table centered highlight">
+							<table class="striped responsive-table highlight">
 								<thead>
 									<tr>
 										<th>Command</th>
@@ -1279,7 +1279,7 @@
 								</form>
 							</div>
 							@endif
-							<table class="striped responsive-table centered highlight">
+							<table class="striped responsive-table highlight">
 								<thead>
 									<tr>
 										<th>Type</th>
