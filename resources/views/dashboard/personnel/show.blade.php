@@ -503,7 +503,7 @@
 								</form>
 							</div>
 							@endif
-							<table class="striped responsive-table centered highlight">
+							<table class="striped responsive-table centered ">
 								<thead>
 									<tr>
 										<th>Name</th>
