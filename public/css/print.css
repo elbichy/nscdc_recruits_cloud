@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box
+}
+
+html,
+body {
+    width: 100%;
+}
+
+body {
+    font-family: sans-serif, Arial, Helvetica;
+    background-color: #333;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+.wrapper {
+    width: 60% !important;
+    height: auto !important;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1cm;
+    background-color: #fff;
+}
+
+.wrapper header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.wrapper header img {
+    margin-bottom: 8px;
+}
+
+.wrapper header h1 {
+    margin-bottom: 8px;
+}
+
+.wrapper header h3 {
+    margin-bottom: 8px;
+}
+
+.wrapper .firstRow {
+    width: 100%;
+    margin-top: .5cm;
+    /* border: 1px solid red; */
+}
+
+.wrapper .firstRow table {
+    height: 100px;
+    float: left;
+    width: 70%;
+}
+
+caption {
+    /* border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black; */
+    padding: 10px 10px;
+    font-weight: bold;
+}
+
+table,
+tr,
+th,
+td {
+    border: 1px solid #999;
+    border-collapse: collapse;
+    padding: 10px 10px;
+}
+
+table {
+    width: 100%;
+}
+
+.wrapper .firstRow .passportContainer {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    float: right;
+}
+
+.wrapper .firstRow .passportContainer img {
+    width: 100%;
+}
+
+.wrapper .secondRow {
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-top: .5cm;
+}
+
+.wrapper .thirdRow {
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-top: .5cm;
+}
+
+.wrapper .fourthRow {
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-top: .5cm;
+}
+
+.wrapper .fifthRow {
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-top: .5cm;
+}
+
+.wrapper .sixthRow {
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-top: .5cm;
+}
+
+.wrapper .seventhRow {
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-top: .5cm;
+}
+
+.wrapper .eightRow {
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-top: .5cm;
+}
+
+.page-break {
+    display: block;
+    height: 100px;
+}
+
+@media print {
+    .wrapper {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 1cm;
+        background-color: #fff;
+    }
+    @page {
+        margin: 1cm;
+    }
+}
