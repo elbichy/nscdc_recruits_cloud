@@ -124,10 +124,10 @@ Route::group(['prefix' => 'dashboard'], function (){
 		// APPOINTMENT
 		Route::group(['prefix' => 'appointment'], function () {
 
-			Route::get('/', [AppointmentController::class, 'manage'])->name('manage_appointment')->middleware(['role:super admin|appointment manager']);
-			Route::get('/manage', [AppointmentController::class, 'manage'])->name('manage_appointment')->middleware(['role:super admin|appointment manager']);
+			Route::get('/', [AppointmentController::class, 'manage'])->name('manage_appointment');
+			Route::get('/manage', [AppointmentController::class, 'manage'])->name('manage_appointment');
 
-			Route::get('/manage/{year}', [AppointmentController::class, 'manage_appointment'])->name('manage_appointment_year')->middleware(['role:super admin|appointment manager']);
+			Route::get('/manage/{year}', [AppointmentController::class, 'manage_appointment'])->name('manage_appointment_year');
 			Route::get('/get_all/{year}/', [AppointmentController::class, 'get_all'])->name('appointment_get_list');
 
 			Route::get('/manage/edit/{appointment}', [AppointmentController::class, 'edit'])->name('appointment_edit');
@@ -139,8 +139,8 @@ Route::group(['prefix' => 'dashboard'], function (){
 			});
 
 			// // GENERATION OF LETTER
-			Route::post('/generate/letter/bulk', [AppointmentController::class, 'generate_bulk_appointment_letter'])->name('generate_bulk_appointment_letter')->middleware(['role:super admin|appointment manager']);
-			Route::get('/generate/letter/{candidate}', [AppointmentController::class, 'generate_single_appointment_letter'])->name('generate_single_appointment_letter')->middleware(['role:super admin|appointment manager']);
+			Route::post('/generate/letter/bulk', [AppointmentController::class, 'generate_bulk_appointment_letter'])->name('generate_bulk_appointment_letter');
+			Route::get('/generate/letter/{candidate}', [AppointmentController::class, 'generate_single_appointment_letter'])->name('generate_single_appointment_letter');
 		});
 
 		
