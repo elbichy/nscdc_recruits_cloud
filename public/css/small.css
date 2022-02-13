@@ -1263,6 +1263,36 @@
     .app .my-content-wrapper .content-container .sectionWrap .sectionProfileWrap .fieldset .docWrapper ul li:last-child {
         font-size: 12px;
     }
+    .app .my-content-wrapper .content-container .sectionWrap .sectionGeneralWrap {
+        width: 95%;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 4px;
+        padding: 25px;
+        margin: 0 0 40px 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .app .my-content-wrapper .content-container .sectionWrap .sectionGeneralWrap .role_permission_wrap {
+        width: 100%;
+    }
+    .app .my-content-wrapper .content-container .sectionWrap .sectionGeneralWrap .table_form_wrapper table {
+        width: 100%;
+    }
+    .app .my-content-wrapper .content-container .sectionWrap .sectionGeneralWrap .table_form_wrapper .add_record_form {
+        width: 100%;
+        padding: 8px 8px 0px 8px;
+        background: #136b96;
+    }
+    .app .my-content-wrapper .content-container .sectionWrap .sectionGeneralWrap .table_form_wrapper .add_record_form .row {
+        margin-bottom: 0;
+    }
+    .app .my-content-wrapper .content-container .sectionWrap .sectionGeneralWrap .table_form_wrapper .add_record_form .row input.fillable {
+        border-bottom: 1px solid #ffffff;
+        color: #fff;
+    }
+    .app .my-content-wrapper .content-container .sectionWrap .sectionGeneralWrap .table_form_wrapper .add_record_form .row label {
+        color: #ffffff;
+    }
     .app .my-content-wrapper .content-container .sectionWrap .importRecords {
         width: 100%;
         margin: 0 0 9px 0;
