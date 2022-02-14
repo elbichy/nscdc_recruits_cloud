@@ -36,6 +36,7 @@
     <link rel="stylesheet" charset="utf-8" href="{{asset('materialize-css/css/materialize.min.css')}}">
 
 	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+	<link rel="stylesheet" href="{{asset('css/medium.css')}}">
 	<link rel="stylesheet" href="{{asset('css/small.css')}}">
 </head>
 <body>

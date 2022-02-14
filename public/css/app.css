@@ -1,4 +1,4 @@
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 960px) {
   * {
     margin: 0;
     padding: 0;
@@ -155,7 +155,7 @@ input {
     background: var(--secondary-bg-light);
   }
   .app .form_wrap {
-    width: 26%;
+    width: 367px;
     height: auto;
     padding: 0px;
     background: rgba(255, 255, 255, 0.7) !important;
