@@ -53,6 +53,7 @@
     <link rel="stylesheet" href="{{asset('css/wnoty.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/small.css')}}">
+    <link rel="stylesheet" href="{{asset('css/small.css')}}">
 </head>
 <body>
     <div class="app" id="app">
