@@ -177,7 +177,7 @@
         </li>
     
         {{-- OTHER MENU RIGHT FOR MOBILE DEVICES --}}
-        <li class="hide-on-med-and-up col s12" style="justify-self: flex-end; margin-top: auto;">
+        <li class="hide-on-large-only col s12" style="justify-self: flex-end; margin-top: auto;">
             <ul class="mobileLogout">
                 <li class="logOutBtn">
                     <a href="{{ route('personnel_show', auth()->user()->id) }}">
