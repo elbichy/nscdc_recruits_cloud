@@ -52,7 +52,7 @@
     <link rel="stylesheet"  href="{{asset('css/lightbox.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/wnoty.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('css/small.css')}}">
+    <link rel="stylesheet" href="{{asset('css/medium.css')}}">
     <link rel="stylesheet" href="{{asset('css/small.css')}}">
 </head>
 <body>
