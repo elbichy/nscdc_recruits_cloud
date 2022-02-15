@@ -1213,7 +1213,7 @@
                                                 text-align: center!important;
                                                 float: none!important;
                                                 display: flex!important;
-                                                justify-content: space-evenly!important;
+                                                justify-content: center!important;
                                                 .displaySection {
                                                     width: 100px!important;
                                                     height: 100px!important;
@@ -1225,6 +1225,10 @@
                                                     background: #3178ab!important;
                                                     border: none!important;
                                                     font-size: 100%!important;
+                                                    margin-left: 20px!important;
+                                                    &:first-child {
+                                                        margin-left: 0px!important;
+                                                    }
                                                 }
                                             }
                                         }

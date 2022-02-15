@@ -149,26 +149,26 @@
         <div class="content-container white">
             <div class="sectionWrap z-depth-0">
                 <div class="sectionProfileWrap z-depth-0" style="margin-top:18px; padding:0;">
-					<h5>{{ $personnel->name }}'s Records</h5> 
+					<h5>{{ ucwords(explode(' ', $personnel->name)[0]) }}'s Records</h5> 
 					
 					{{-- PROFILE INFO --}}
 					<div class="profile">
 						<div class="row infoWrap">
 							{{-- BASIC INFORMATION --}}
 							<div class="row">
-								<div class="col s12 l6">
+								<div class="col s12 m4 l6">
 									<div class="detailWrap">
 										<h6>Service name</h6>
 										<p>{{ strtoupper($personnel->name) }}</p>
 									</div>
 								</div>
-								<div class="col s12 l3">
+								<div class="col s12 m4 l3">
 									<div class="detailWrap">
 										<h6>Date of Birth</h6>
 										<p>{{ $personnel->dob }}</p>
 									</div>
 								</div>
-								<div class="col s12 l3">
+								<div class="col s12 m4 l3">
 									<div class="detailWrap">
 										<h6>Gender</h6>
 										<p>{{ $personnel->sex != null ? strtoupper($personnel->sex) : 'N/A' }}</p>
@@ -176,31 +176,31 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="col s12 l2">
+								<div class="col s12 m4 l2">
 									<div class="detailWrap">
 										<h6>Blood group</h6>
 										<p>{{ $personnel->blood_group != null ? strtoupper($personnel->blood_group) : 'N/A' }}</p>
 									</div>
 								</div>
-								<div class="col s12 l3">
+								<div class="col s12 m4 l3">
 									<div class="detailWrap">
 										<h6>Genotype</h6>
 										<p>{{ $personnel->genotype != null ? strtoupper($personnel->genotype) : 'N/A' }}</p>
 									</div>
 								</div>
-								<div class="col s12 l2">
+								<div class="col s12 m4 l2">
 									<div class="detailWrap">
 										<h6>Height</h6>
 										<p>{{ $personnel->height != null ? strtoupper($personnel->height) : 'N/A' }}</p>
 									</div>
 								</div>
-								<div class="col s12 l2">
+								<div class="col s12 m6 l2">
 									<div class="detailWrap">
 										<h6>Weight</h6>
 										<p>{{ $personnel->weight != null ? strtoupper($personnel->weight) : 'N/A' }}</p>
 									</div>
 								</div>
-								<div class="col s12 l3">
+								<div class="col s12 m6 l3">
 									<div class="detailWrap">
 										<h6>Marital status</h6>
 										<p>{{ $personnel->marital_status != null ? strtoupper($personnel->marital_status) : 'N/A' }}</p>
@@ -208,13 +208,13 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="col s12 l3">
+								<div class="col s12 m6 l3">
 									<div class="detailWrap">
 										<h6>Name of Spouse</h6>
 										<p>{{ $personnel->name_of_spouse != null ? strtoupper($personnel->name_of_spouse) : 'N/A' }}</p>
 									</div>
 								</div>
-								<div class="col s12 l3">
+								<div class="col s12 m6 l3">
 									<div class="detailWrap">
 										<h6>Date of Marriage</h6>
 										<p>{{ $personnel->date_of_marriage != null ? $personnel->date_of_marriage : 'N/A' }}</p>
@@ -228,13 +228,13 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="col s12 l3">
+								<div class="col s12 m4 l3">
 									<div class="detailWrap">
 										<h6>Place of Birth</h6>
 										<p>{{ $personnel->place_of_birth != NULL ? strtoupper($personnel->place_of_birth) : 'N/A' }}</p>
 									</div>
 								</div>
-								<div class="col s12 l9">
+								<div class="col s12 m8 l9">
 									<div class="detailWrap">
 										<h6>Permanent address</h6>
 										<p>{{ $personnel->permanent_address != null ? strtoupper($personnel->permanent_address) : 'N/A' }}</p>
@@ -242,25 +242,25 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>State of origin</h6>
 										<p>{{ $state != NULL ? strtoupper($state->state_name) : 'N/A' }}</p>
 									</div>
 								</div>
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>LGA</h6>
 										<p>{{ $lga != NULL ? strtoupper($lga->lg_name) : 'N/A' }}</p>
 									</div>
 								</div>
-								<div class="col s12 l2">
+								<div class="col s12 m2 l2">
 									<div class="detailWrap">
 										<h6>Phone</h6>
 										<p>{{ $personnel->phone_number != null ? $personnel->phone_number : 'N/A' }}</p>
 									</div>
 								</div>
-								<div class="col s12 l4">
+								<div class="col s12 m4 l4">
 									<div class="detailWrap">
 										<h6>Email</h6>
 										<p>{{ $personnel->email != null ? strtolower($personnel->email) : 'N/A' }}</p>
@@ -268,19 +268,19 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>Service no.</h6>
 										<p>{{ $personnel->service_number }}</p>
 									</div>
 								</div>
-								<div class="col s12 l6">
+								<div class="col s12 m6 l6">
 									<div class="detailWrap">
 										<h6>Current Rank</h6>
 										<p>{{ $personnel->rank_full != null ? $personnel->rank_full : 'N/A' }}</p>
 									</div>
 								</div>
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>Grade level</h6>
 										<p>{{ $personnel->gl != null ? $personnel->gl : 'N/A' }}</p>
@@ -288,25 +288,25 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>Step</h6>
 										<p>{{ $personnel->step != null ? $personnel->step : 'N/A'  }}</p>
 									</div>
 								</div>
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>Date of 1st Appt.</h6>
 										<p>{{ $personnel->dofa != null ? $personnel->dofa : 'N/A'  }}</p>
 									</div>
 								</div>
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>Date of Confirmation</h6>
 										<p>{{ $personnel->doc != null ? $personnel->doc : 'N/A'  }}</p>
 									</div>
 								</div>
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>Date of Present Appt.</h6>
 										<p>{{ $personnel->dopa != null ? $personnel->dopa : 'N/A'  }}</p>
@@ -314,25 +314,25 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="col s12 l3">
+								<div class="col s12 m4 l3">
 									<div class="detailWrap">
 										<h6>Paypoint</h6>
 										<p>{{ $personnel->paypoint != null ? strtoupper($personnel->paypoint) : 'N/A'  }}</p>
 									</div>
 								</div>
-								<div class="col s12 l3">
+								<div class="col s12 m2 l3">
 									<div class="detailWrap">
 										<h6>Salary structure</h6>
 										<p>{{ $personnel->salary_structure != null ? strtoupper($personnel->salary_structure) : 'N/A' }}</p>
 									</div>
 								</div>
-								<div class="col s12 l3">
+								<div class="col s12 m4 l3">
 									<div class="detailWrap">
 										<h6>Bank</h6>
 										<p>{{ $personnel->bank != null ? strtoupper($personnel->bank) : 'N/A' }}</p>
 									</div>
 								</div>
-								<div class="col s12 l3">
+								<div class="col s12 m2 l3">
 									<div class="detailWrap">
 										<h6>Account No.</h6>
 										<p>{{ $personnel->account_number != null ? $personnel->account_number : 'N/A' }}</p>
@@ -340,25 +340,25 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>BVN</h6>
 										<p>{{ $personnel->bvn != null ? $personnel->bvn : 'N/A' }}</p>
 									</div>
 								</div>
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>IPPS No.</h6>
 										<p>{{ $personnel->ippis_number != null ? $personnel->ippis_number : 'N/A' }}</p>
 									</div>
 								</div>	
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>NIN No.</h6>
 										<p>{{ $personnel->nin_number != null ? $personnel->nin_number : 'N/A' }}</p>
 									</div>
 								</div>	
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>NHIS No.</h6>
 										<p>{{ $personnel->nhis_number != null ? $personnel->nhis_number : 'N/A' }}</p>
@@ -366,25 +366,25 @@
 								</div>
 							</div>
 							<div class="row">	
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>NHF No.</h6>
 										<p>{{ $personnel->nhf != null ? $personnel->nhf : 'N/A' }}</p>
 									</div>
 								</div>
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>PFA</h6>
 										<p>{{ $personnel->pfa != null ? strtoupper($personnel->pfa) : 'N/A' }}</p>
 									</div>
 								</div>	
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>PEN no.</h6>
 										<p>{{ $personnel->pen_number != null ? $personnel->pen_number : 'N/A' }}</p>
 									</div>
 								</div>	
-								<div class="col s12 l3">
+								<div class="col s12 m3 l3">
 									<div class="detailWrap">
 										<h6>Specialization</h6>
 										<p>{{ $personnel->specialization != null ? $personnel->specialization : 'N/A' }}</p>
