@@ -206,7 +206,7 @@ input {
     border-bottom: 1px solid #eee;
     padding: 0 8px;
   }
-  body .app nav .nav-wrapper .search_wrapper span p a {
+  body .app nav .nav-wrapper .search_wrapper span a {
     display: block;
     width: 100%;
     color: #1063a7;
@@ -215,7 +215,7 @@ input {
     border-bottom: 1px solid #eee;
     padding: 0 8px;
   }
-  body .app nav .nav-wrapper .search_wrapper span p a:hover {
+  body .app nav .nav-wrapper .search_wrapper span a:hover {
     background-color: #eee;
   }
   body .app nav .nav-wrapper #show-side-nav {
