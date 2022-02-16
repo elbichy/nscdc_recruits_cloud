@@ -1,4 +1,4 @@
-@extends('errors::minimal')
+@extends('errors.layout')
 
 @section('title', __('Forbidden'))
 @section('icon', 'error_icon fas fa-server fa-4x')

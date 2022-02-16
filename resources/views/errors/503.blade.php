@@ -1,4 +1,4 @@
-@extends('errors::minimal')
+@extends('errors.layout')
 
 @section('title', __('Service Unavailable'))
 @section('icon', 'error_icon fas fa-server fa-4x')

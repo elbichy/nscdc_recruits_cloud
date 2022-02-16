@@ -1,4 +1,4 @@
-@extends('errors::minimal')
+@extends('errors.layout')
 
 @section('title', __('Too Many Requests'))
 @section('icon', 'error_icon fas fa-server fa-4x')
