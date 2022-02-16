@@ -184,15 +184,16 @@ input {
     align-items: center;
     margin-bottom: 30px;
   }
+  .app .form_wrap .form .input-field {
+    padding: 0;
+  }
   .app .form_wrap .form .input-field .prefix:active {
     color: var(--primary-bg-mid) !important;
   }
   .app .form_wrap .form p {
-    width: 85%;
+    width: 100%;
     display: flex;
-  }
-  .app .form_wrap .form p label {
-    flex: 4;
+    justify-content: flex-end;
   }
   .app .form_wrap .form p label input[type=checkbox].filled-in:checked + span:not(.lever):after {
     top: 0;
@@ -203,7 +204,7 @@ input {
     z-index: 0;
   }
   .app .form_wrap .form p .login_btn {
-    flex: 2;
+    margin-left: 12px;
     background: var(--primary-bg-mid);
   }
   .app .form_wrap .form p .login_btn:hover {

@@ -154,11 +154,15 @@
                     flex-direction: column;
                     align-items: flex-end;
                     margin-bottom: 30px;
+                    .input-field {
+                        padding: 0;
+                    }
                     p {
-                        width: 85%;
+                        width: 100%;
                         display: flex;
+                        justify-content: flex-end;
                         label {
-                            flex: 4;
+                            // flex: 4;
                             input[type="checkbox"].filled-in:checked+span:not(.lever):after {
                                 top: 0;
                                 width: 20px;
@@ -169,7 +173,8 @@
                             }
                         }
                         .login_btn {
-                            flex: 2;
+                            // flex: 2;
+                            margin-left: 12px;
                             background: var(--primary-bg-mid);
                             &:hover {
                                 background: var(--button-light);
