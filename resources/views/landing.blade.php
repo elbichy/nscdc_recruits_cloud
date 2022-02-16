@@ -77,11 +77,12 @@
 						<input type="checkbox" name="remember" class="filled-in" />
 						<span>Remember me!</span>
 					</label>
+					<button class="login_btn btn waves-effect waves-light" type="submit">Sign In
+						<i class="material-icons right">send</i>
+					</button>
 				</p>
 				
-				<button class="login_btn btn waves-effect waves-light" type="submit">Sign In
-					<i class="material-icons right">send</i>
-				</button>
+				
 			</form>
 		</div>
 	</div>

@@ -154,20 +154,26 @@
                     flex-direction: column;
                     align-items: flex-end;
                     margin-bottom: 30px;
-                    .login_btn {
-                        background: var(--primary-bg-mid);
+                    p {
                         width: 85%;
                         display: flex;
-                        justify-content: center;
-                        float: right!important;
-                        &:hover {
-                            background: var(--button-light);
+                        label {
+                            flex: 4;
+                            input[type="checkbox"].filled-in:checked+span:not(.lever):after {
+                                top: 0;
+                                width: 20px;
+                                height: 20px;
+                                border: 2px solid #0288d1;
+                                background-color: #0288d1;
+                                z-index: 0;
+                            }
                         }
-                    }
-                    .input-field {
-                        padding: 0!important;
-                        .prefix:active {
-                            color: var(--primary-bg-mid) !important;
+                        .login_btn {
+                            flex: 2;
+                            background: var(--primary-bg-mid);
+                            &:hover {
+                                background: var(--button-light);
+                            }
                         }
                     }
                 }

@@ -142,21 +142,27 @@ input {
     align-items: flex-end;
     margin-bottom: 30px;
   }
-  body .app .form_wrap .form .login_btn {
-    background: var(--primary-bg-mid);
+  body .app .form_wrap .form p {
     width: 85%;
     display: flex;
-    justify-content: center;
-    float: right !important;
   }
-  body .app .form_wrap .form .login_btn:hover {
+  body .app .form_wrap .form p label {
+    flex: 4;
+  }
+  body .app .form_wrap .form p label input[type=checkbox].filled-in:checked + span:not(.lever):after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0288d1;
+    background-color: #0288d1;
+    z-index: 0;
+  }
+  body .app .form_wrap .form p .login_btn {
+    flex: 2;
+    background: var(--primary-bg-mid);
+  }
+  body .app .form_wrap .form p .login_btn:hover {
     background: var(--button-light);
-  }
-  body .app .form_wrap .form .input-field {
-    padding: 0 !important;
-  }
-  body .app .form_wrap .form .input-field .prefix:active {
-    color: var(--primary-bg-mid) !important;
   }
   body .app nav {
     background: var(--primary-bg-dark);
