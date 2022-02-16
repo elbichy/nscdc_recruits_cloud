@@ -68,12 +68,14 @@
                         <div class="code">
                             @yield('code')
                         </div>
-            
                         <div class="message" style="padding: 10px;">
                             @yield('message')
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="footer z-depth-1">
+                <p>&copy; NSCDC ICT & Cybersecurity Department</p>
             </div>
         </div>
 
