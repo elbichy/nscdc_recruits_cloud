@@ -149,6 +149,7 @@ input {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
   }
   body .app .form_wrap .form p label input[type=checkbox].filled-in:checked + span:not(.lever):after {
     top: 0;

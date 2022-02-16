@@ -200,6 +200,7 @@
                     width: 100%;
                     display: flex;
                     justify-content: flex-end;
+                    align-items: center;
                     label {
                         // flex: 4;
                         input[type="checkbox"].filled-in:checked+span:not(.lever):after {
