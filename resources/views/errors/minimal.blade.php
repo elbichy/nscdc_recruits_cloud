@@ -50,9 +50,9 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            <div class="code">
+            {{-- <div class="code">
                 @yield('code')
-            </div>
+            </div> --}}
 
             <div class="message" style="padding: 10px;">
                 @yield('message')
