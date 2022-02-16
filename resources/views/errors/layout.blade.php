@@ -62,15 +62,14 @@
         @include('layouts.nav')
         {{-- CONTENT AREA    --}}
         <div class="my-content-wrapper">
-            <div class="content-container white">
-                <div class="sectionWrap">
-                    <div class="flex-center position-ref full-height">
-                        <div class="code">
-                            @yield('code')
-                        </div>
-                        <div class="message" style="padding: 10px;">
-                            @yield('message')
-                        </div>
+            <div class="content-container white" style="display:flex;">
+                <div class="sectionErrorWrap">
+                    <div class="error_title">
+                        <i class="@yield('icon')"></i>
+                        <h1 class="error_code">@yield('code')</h1>
+                    </div>
+                    <div class="error_msg">
+                        <p>@yield('message')</p>
                     </div>
                 </div>
             </div>
