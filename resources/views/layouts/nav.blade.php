@@ -10,9 +10,9 @@
             {{-- BREADCRUMB --}}
             <div class="left breadcrumbWrap hide-on-med-and-up">
                 <a href="/{{request()->segment(1)}}/{{request()->segment(2)}}" class="breadcrumb">{{(request()->segment(2) == '') ? 'Dashbord' : ucfirst(request()->segment(2))}}</a>
-                @if(request()->segment(3) != '')
+                {{-- @if(request()->segment(3) != '')
                     <a href="/{{request()->segment(1)}}/{{ request()->segment(2) }}/{{request()->segment(3)}}" class="breadcrumb">{{ strtoupper(request()->segment(3)) }}</a>
-                @endif
+                @endif --}}
             </div>
             
             {{-- BREADCRUMB --}}
