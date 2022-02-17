@@ -33,6 +33,9 @@ Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('l
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
 Route::group(['prefix' => 'dashboard'], function (){
+	Route::get('charts', function(){
+		return 'Yeah!';
+	});
 	Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 	
 	// PERSONNEL

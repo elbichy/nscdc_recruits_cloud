@@ -160,10 +160,12 @@
                     p {
                         width: 100%;
                         display: flex;
-                        justify-content: flex-end;
+                        flex-direction: column;
+                        justify-content: flex-start;
                         align-items: center;
                         label {
                             // flex: 4;
+                            margin-bottom: 12px;
                             input[type="checkbox"].filled-in:checked+span:not(.lever):after {
                                 top: 0;
                                 width: 20px;
@@ -175,7 +177,10 @@
                         }
                         .login_btn {
                             // flex: 2;
-                            margin-left: 12px;
+                            align-self: stretch;
+                            margin-left: 0;
+                            display: flex;
+                            justify-content: center;
                             background: var(--primary-bg-mid);
                             &:hover {
                                 background: var(--button-light);

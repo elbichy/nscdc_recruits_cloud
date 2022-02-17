@@ -148,8 +148,12 @@ input {
   body .app .form_wrap .form p {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+  }
+  body .app .form_wrap .form p label {
+    margin-bottom: 12px;
   }
   body .app .form_wrap .form p label input[type=checkbox].filled-in:checked + span:not(.lever):after {
     top: 0;
@@ -160,7 +164,10 @@ input {
     z-index: 0;
   }
   body .app .form_wrap .form p .login_btn {
-    margin-left: 12px;
+    align-self: stretch;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
     background: var(--primary-bg-mid);
   }
   body .app .form_wrap .form p .login_btn:hover {
