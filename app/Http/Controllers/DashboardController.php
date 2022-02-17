@@ -31,15 +31,15 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $commissioned = User::where('cadre', 'superintendent')->count();
-        $other_ranks = User::where('cadre', '!=', 'superintendent')->count();
+        $commissioned = User::whereDate('dofa', '=', '2022-01-21')->where('cadre', 'superintendent')->count();
+        $other_ranks = User::whereDate('dofa', '=', '2022-01-21')->where('cadre', '!=', 'superintendent')->count();
         $total_personnel = User::whereDate('dofa', '2022-01-21')->count();
         $admin = User::whereDate('dofa', '!=', '2022-01-21')->count();
 
-        $male = User::where('sex', 'male')->count();
-        $female = User::where('sex', 'female')->count();
+        $male = User::whereDate('dofa', '=', '2022-01-21')->where('sex', 'male')->count();
+        $female = User::whereDate('dofa', '=', '2022-01-21')->where('sex', 'female')->count();
 
-        $null = User::where('sex', 'others')->count();
+        $null = User::whereDate('dofa', '=', '2022-01-21')->where('sex', 'others')->count();
         $genderChart = new GenderChart;
         $genderChart->labels(['Male', 'Female', 'Other']);
         $genderChart->dataset('Sex', 'doughnut', [$male, $female, $null])->options([
@@ -51,7 +51,7 @@ class DashboardController extends Controller
         ]);
 
         $marital_status = [];
-        $ms = User::distinct()->pluck('marital_status');
+        $ms = User::whereDate('dofa', '=', '2022-01-21')->distinct()->pluck('marital_status');
         foreach($ms as $status){
             $marital_status[$status] = User::where('marital_status', $status)->count();
         }
@@ -90,7 +90,9 @@ class DashboardController extends Controller
         // ]);
         
 
-        $soo = State::withCount('users')->pluck('users_count','state_name');
+        $soo = State::withCount(['users' => function($q){
+            $q->whereDate('dofa', '=', '2022-01-21');
+        }])->pluck('users_count','state_name');
         $sooChart = new SooChart;
         $sooChart->labels($soo->keys()->map(function ($value){
             return strtoupper($value);
