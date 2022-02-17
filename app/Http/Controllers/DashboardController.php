@@ -33,8 +33,8 @@ class DashboardController extends Controller
     {
         $commissioned = User::where('cadre', 'superintendent')->count();
         $other_ranks = User::where('cadre', '!=', 'superintendent')->count();
-        $total_personnel = User::whereDate('dofa', '2019-01-01')->count();
-        $admin = User::whereDate('dofa', '!=', '2019-01-01')->count();
+        $total_personnel = User::whereDate('dofa', '2022-01-21')->count();
+        $admin = User::whereDate('dofa', '!=', '2022-01-21')->count();
 
         $male = User::where('sex', 'male')->count();
         $female = User::where('sex', 'female')->count();
