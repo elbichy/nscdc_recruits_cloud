@@ -66,16 +66,20 @@
 				<div class="sectionDashboardWrap">
 					<div class="row" style="width: 100%; margin-bottom: 0px;">
 						<div class="col s12 l6">
-							<div class="card" style="width: 100%; height: 430px; padding:6px">
-								<h5 class="center" style="font-size:14px; font-weight:bold; margin:0;">Distribution of personnel by Gender</h5>
+							<div class="card" style="width: 100%; padding:6px">
+								<h5 class="center">
+									DISTRIBUTION OF PERSONNEL BY GENDER
+								</h5>
 								<div style="width: 100%;">
 									{!! $genderChart->container() !!}
 								</div>
 							</div>
 						</div>
 						<div class="col s12 l6">
-							<div class="card" style="width: 100%; height: 430px; padding:6px">
-								<h5 class="center" style="font-size:14px; font-weight:bold; margin:0;">Distribution of personnel by Marital Status</h5>
+							<div class="card" style="width: 100%; padding:6px">
+								<h5 class="center">
+									DISTRIBUTION OF PERSONNEL BY MARITAL STATUS
+								</h5>
 								<div style="width: 100%;">
 									{!! $maritalStatusChart->container() !!}
 								</div>
@@ -84,8 +88,10 @@
 					</div>
 					<div class="row" style="width: 100%; margin-bottom: 0px;">
 						<div class="col s12">
-							<div class="card" style="width: 100%; height: 430px; padding:6px">
-								<h5 class="center" style="font-size:14px; font-weight:bold; margin:0;">Distribution of personnel by Grade Level</h5>
+							<div class="card" style="width: 100%; padding:6px">
+								<h5 class="center">
+									DISTRIBUTION OF PERSONNEL BY RANK
+								</h5>
 								<div style="width: 100%;">
 									{!! $rankChart->container() !!}
 								</div>
@@ -95,8 +101,10 @@
 					<div class="row soo" style="width: 100%; margin-bottom: 0px;">
 						<div class="col s12">
 							<div class="card" style="width: 100%; height: auto; padding:6px">
-								<h5 class="center" style="font-size:14px; font-weight:bold; margin:0;">Distribution of personnel by State of Origin</h5>
-								<div style="width: 100%;">
+								<h5 class="center">
+									DISTRIBUTION OF PERSONNEL BY STATE OF ORIGIN
+								</h5>
+								<div class="soo" style="width: 100%;">
 									{!! $sooChart->container() !!}
 								</div>
 							</div>

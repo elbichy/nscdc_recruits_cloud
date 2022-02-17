@@ -1284,8 +1284,17 @@ input {
   body .app .my-content-wrapper .content-container .sectionWrap .sectionDashboardWrap {
     width: 100%;
   }
-  body .app .my-content-wrapper .content-container .sectionWrap .sectionDashboardWrap .soo canvas {
-    height: 600px !important;
+  body .app .my-content-wrapper .content-container .sectionWrap .sectionDashboardWrap .card {
+    height: auto;
+  }
+  body .app .my-content-wrapper .content-container .sectionWrap .sectionDashboardWrap .card h5 {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0;
+    padding: 12px 0 6px 0;
+  }
+  body .app .my-content-wrapper .content-container .sectionWrap .sectionDashboardWrap .card .soo canvas {
+    height: 750px !important;
   }
   body .app .my-content-wrapper .content-container .sectionWrap .importRecords {
     width: 100%;

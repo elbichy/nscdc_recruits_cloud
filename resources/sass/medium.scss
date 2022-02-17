@@ -1328,10 +1328,18 @@
                             }
                         }
                         .sectionDashboardWrap {
-                            width: 100%;
-                            .soo {
-                                canvas {
-                                    height: 750px!important;
+                            .card {
+                                height: auto;
+                                h5 {
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    margin: 0;
+                                    padding: 12px 0 6px 0;
+                                }
+                                .soo {
+                                    canvas {
+                                        height: 750px!important;
+                                    }
                                 }
                             }
                         }
