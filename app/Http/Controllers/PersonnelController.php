@@ -36,7 +36,7 @@ class PersonnelController extends Controller
         return view('dashboard.personnel.all');
     }
     public function get_all(){
-        $personnel = User::whereDate('dofa', '2022-01-21')
+        $personnel = User::whereDate('dofa', '2022-01-31')
         ->orderByRaw(
             "FIELD(
                 rank_full, 
@@ -589,7 +589,7 @@ class PersonnelController extends Controller
             array('id' => '1','name' => 'AIICO Pension Managers Limited','code'=>'044'),
             array('id' => '2','name' => 'APT Pension Fund Managers Limited','code'=>'023'),
             array('id' => '3','name' => 'ARM Pension Managers Limited','code'=>'063'),
-            array('id' => '4','name' => 'AXA Mansard Pension Limited','code'=>''),
+            array('id' => '4','name' => 'AXA Mansard Pension Limited (Tangerine)','code'=>''),
             array('id' => '5','name' => 'CrusaderSterling Pensions Limited','code'=>'050'),
             array('id' => '6','name' => 'FCMB Pensions Limited','code'=>'070'),
             array('id' => '7','name' => 'Fidelity Pension Managers','code'=>'011'),

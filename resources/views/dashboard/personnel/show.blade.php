@@ -394,7 +394,7 @@
 							<div class="row">
 								<div class="fieldset" id="countdowntimer">
 									<legend><p>
-										Count down till retirement
+										Count down to retirement
 									</p></legend>
 									<span id="label_timer"></span>
 								</div>
