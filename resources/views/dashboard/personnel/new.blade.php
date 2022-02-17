@@ -305,7 +305,7 @@
 								</div>
 								{{-- Date of 1st Appt. --}}
 								<div class="input-field col s12 l3">
-									<input id="dofa" name="dofa" type="date" value="2019-01-01" required>
+									<input id="dofa" name="dofa" type="date" value="2022-01-21" required>
 									@if ($errors->has('dofa'))
 										<span class="helper-text red-text">
 											<strong>{{ $errors->first('dofa') }}</strong>
@@ -325,7 +325,7 @@
 								</div>
 								{{-- Date of Present Appt. --}}
 								<div class="input-field col s12 l3">
-									<input id="dopa" name="dopa" type="date" value="2019-01-01" required>
+									<input id="dopa" name="dopa" type="date" value="2022-01-21" required>
 									@if ($errors->has('dopa'))
 										<span class="helper-text red-text">
 											<strong>{{ $errors->first('dopa') }}</strong>

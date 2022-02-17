@@ -36,7 +36,7 @@ class PersonnelController extends Controller
         return view('dashboard.personnel.all');
     }
     public function get_all(){
-        $personnel = User::whereDate('dofa', '2019-01-01')
+        $personnel = User::whereDate('dofa', '2022-01-21')
         ->orderByRaw(
             "FIELD(
                 rank_full, 
