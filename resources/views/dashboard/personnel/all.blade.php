@@ -41,10 +41,11 @@
                                 <th>Sex</th>
                                 <th>DOB</th>
                                 <th>DOFA</th>
-                                <th>DOPA</th>
+                                {{-- <th>DOPA</th> --}}
                                 <th>Rank</th>
                                 <th>Formation</th>
-                                <th>Synched</th>
+                                <th>Updated</th>
+                                <th>Passport</th>
                             </tr>
                         </thead>
                         <tfoot>
@@ -56,10 +57,11 @@
                                 <th>Sex</th>
                                 <th>DOB</th>
                                 <th>DOFA</th>
-                                <th>DOPA</th>
+                                {{-- <th>DOPA</th> --}}
                                 <th>Rank</th>
                                 <th>Formation</th>
-                                <th>Synched</th>
+                                <th>Updated</th>
+                                <th>Passport</th>
                             </tr>
                         </tfoot>
                     </table>
@@ -112,10 +114,11 @@
                     { data: 'sex', name: 'sex'},
                     { data: 'dob', name: 'dob'},
                     { data: 'dofa', name: 'dofa'},
-                    { data: 'dopa', name: 'dopa'},
+                    // { data: 'dopa', name: 'dopa'},
                     { data: 'rank_short', name: 'rank_short'},
                     { data: 'current_formation', name: 'current_formation'},
-                    { data: 'synched', name: 'synched'}
+                    { data: 'updated_at', name: 'updated_at'},
+                    { data: 'passport', name: 'passport', "orderable": false, "searchable": false},
                 ],
                 initComplete: function () {
                     this.api().columns().every(function () {

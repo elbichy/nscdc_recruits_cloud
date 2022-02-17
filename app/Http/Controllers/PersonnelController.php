@@ -36,15 +36,59 @@ class PersonnelController extends Controller
         return view('dashboard.personnel.all');
     }
     public function get_all(){
-        $personnel = User::whereDate('dofa', '2019-01-01')->orderByRaw("FIELD(rank_full, 'Commandant General of Corps', 'Deputy Commandant General of Corps', 'Assistant Commandant General of Corps', 'Commandant of Corps', 'Deputy Commandant of Corps', 'Assistant Commandant of Corps', 'Chief Superintendent of Corps', 'Superintendent of Corps', 'Deputy Superintendent of Corps', 'Assistant Superintendent of Corps I', 'Assistant Superintendent of Corps II', 'Chief Inspector of Corps', 'Deputy Chief Inspector of Corps', 'Assistant Chief Inspector of Corps', 'Principal Inspector of Corps I', 'Principal Inspector of Corps II', 'Senior Inspector of Corps', 'Inspector of Corps', 'Assistant Inspector of Corps', 'Chief Corps Assistant', 'Senior Corps Assistant', 'Corps Assistant I', 'Corps Assistant II', 'Corps Assistant III')")->orderBy('service_number', 'ASC');
+        $personnel = User::whereDate('dofa', '2019-01-01')
+        ->orderByRaw(
+            "FIELD(
+                rank_full, 
+                'Commandant General of Corps', 
+                'Deputy Commandant General of Corps', 
+                'Assistant Commandant General of Corps', 
+                'Commandant of Corps', 
+                'Deputy Commandant of Corps', 
+                'Assistant Commandant of Corps', 
+                'Chief Superintendent of Corps', 
+                'Superintendent of Corps', 
+                'Deputy Superintendent of Corps', 
+                'Assistant Superintendent of Corps I', 
+                'Assistant Superintendent of Corps II', 
+                'Chief Inspector of Corps', 
+                'Deputy Chief Inspector of Corps', 
+                'Assistant Chief Inspector of Corps', 
+                'Principal Inspector of Corps I', 
+                'Principal Inspector of Corps II', 
+                'Senior Inspector of Corps', 
+                'Inspector of Corps', 
+                'Assistant Inspector of Corps', 
+                'Chief Corps Assistant', 
+                'Senior Corps Assistant', 
+                'Corps Assistant I', 
+                'Corps Assistant II', 
+                'Corps Assistant III'
+            )"
+        )->orderBy('updated_at', 'DESC');
+
         return DataTables::of($personnel)
             ->editColumn('name', function ($personnel) {
                 return "<b><a href=\"/dashboard/personnel/$personnel->id/show\">$personnel->name</a></b>";
             })
+            ->editColumn('updated_at', function ($personnel) {
+                return Carbon::create($personnel->updated_at)->diffForHumans();
+            })
             ->addColumn('checkbox', function($redeployment) {
                 return '<input type="checkbox" name="personnelCheckbox[]" class="personnelCheckbox browser-default" value="'.$redeployment->id.'" />';
             })
-            ->rawColumns(['name', 'checkbox'])
+            ->addColumn('passport', function($redeployment) {
+                if(!$redeployment->passport){
+                    return '
+                    <span style="margin-left:5px;" class="red-text" title="push to cloud"><i class="material-icons">close</i></span>
+                    ';
+                }else{
+                    return '
+                        <span style="margin-left:5px;" class="green-text"><i class="fad fa-check-double fa-lg"></i></span>
+                    ';
+                }
+            })
+            ->rawColumns(['name', 'checkbox', 'passport'])
             ->make();
     }
     public function unsynched(){
