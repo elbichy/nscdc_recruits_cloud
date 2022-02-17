@@ -125,7 +125,11 @@ class User extends Authenticatable
     
     public function getDocAttribute($value)
     {
-        return date("Y-m-d", strtotime($value));
+        if($value != null){
+            return date("Y-m-d", strtotime($value));
+        }else{
+            return null;
+        }
     }
 
     public function getDopaAttribute($value)
