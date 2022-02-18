@@ -4,19 +4,17 @@
     "start_url": "/index.php",
     "background_color": "#FF0400",
     "description": "Nigeria Security & Civil Defence Corps Personnel Database",
-    "display": "fullscreen",
+    "display": "standalone",
     "theme_color": "#FF0400",
     "icons": [{
-            "src": "favicon.png",
+            "src": "icon300.png",
             "sizes": "300x300",
-            "type": "image/png",
-            "purpose": "any"
+            "type": "image/png"
         },
         {
-            "src": "splash.png",
+            "src": "icon512.png",
             "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any"
+            "type": "image/png"
         }
     ]
 }

@@ -9,9 +9,9 @@
     </title>
     <link rel="icon" type="image/x-icon" href="{{ asset('storage/favicon.png') }}">
     <!-- PWA  -->
-    <meta name="theme-color" content="#6777ef"/>
-    <link rel="apple-touch-icon" href="{{ asset('logo.PNG') }}">
-    <link rel="manifest" href="{{ asset('/manifest.json') }}">
+    <meta name="theme-color" content="#FF0400"/>
+	<link rel="apple-touch-icon" href="{{ asset('icon512.png') }}">
+	<link rel="manifest" href="{{ asset('/manifest.json') }}">
     <style>
         :root {
             --primary-bg-dark: #164f6b; 
