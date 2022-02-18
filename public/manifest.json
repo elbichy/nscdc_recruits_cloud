@@ -1,11 +1,11 @@
 {
-    "name": "Laravel Package Tutorial",
-    "short_name": "LPT",
+    "name": "NSCDC Admin Directorate Database",
+    "short_name": "NSCDC DB",
     "start_url": "/index.php",
-    "background_color": "#6777ef",
+    "background_color": "#FF0400",
     "description": "Tutorial of Laravel Package",
     "display": "fullscreen",
-    "theme_color": "#6777ef",
+    "theme_color": "#FF0400",
     "icons": [{
         "src": "favicon.png",
         "sizes": "300x300",
