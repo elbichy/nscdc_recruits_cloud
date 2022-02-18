@@ -6,12 +6,10 @@
     "description": "Tutorial of Laravel Package",
     "display": "fullscreen",
     "theme_color": "#6777ef",
-    "icons": [
-        {
-            "src": "logo.PNG",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any maskable"
-        }
-    ]
+    "icons": [{
+        "src": "favicon.png",
+        "sizes": "300x300",
+        "type": "image/png",
+        "purpose": "any"
+    }]
 }

@@ -9,6 +9,10 @@
 	<script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
     <script src="{{asset('js/jquery-ui.min.js')}}"></script>
     <script src="{{asset('js/axios.min.js')}}"></script>
+	<!-- PWA  -->
+	<meta name="theme-color" content="#6777ef"/>
+	<link rel="apple-touch-icon" href="{{ asset('logo.PNG') }}">
+	<link rel="manifest" href="{{ asset('/manifest.json') }}">
 	<style>
 		:root {
 			--primary-bg-dark: #164f6b; 
