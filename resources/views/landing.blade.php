@@ -10,7 +10,7 @@
     <script src="{{asset('js/jquery-ui.min.js')}}"></script>
     <script src="{{asset('js/axios.min.js')}}"></script>
 	<!-- PWA  -->
-	<meta name="theme-color" content="#FF0400"/>
+	<meta name="theme-color" content="#164f6b"/>
 	<link rel="apple-touch-icon" href="{{ asset('icon512.png') }}">
 	<link rel="manifest" href="{{ asset('/manifest.json') }}">
 	<style>

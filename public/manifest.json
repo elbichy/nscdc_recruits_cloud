@@ -5,7 +5,7 @@
     "background_color": "#FF0400",
     "description": "Nigeria Security & Civil Defence Corps Personnel Database",
     "display": "standalone",
-    "theme_color": "#FF0400",
+    "theme_color": "#164f6b",
     "icons": [{
             "src": "icon300.png",
             "sizes": "300x300",
