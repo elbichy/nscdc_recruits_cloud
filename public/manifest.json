@@ -7,11 +7,6 @@
     "display": "standalone",
     "theme_color": "#164f6b",
     "icons": [{
-            "src": "icon300.png",
-            "sizes": "300x300",
-            "type": "image/png"
-        },
-        {
             "src": "icon512.png",
             "sizes": "512x512",
             "type": "image/png"
