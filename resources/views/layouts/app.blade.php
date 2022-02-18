@@ -66,7 +66,13 @@
     </div>
     @include('sweetalert::alert')
     <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
+    <script src="{{ asset('/sw.js') }}"></script>
     <script>
+        if (!navigator.serviceWorker.controller) {
+            navigator.serviceWorker.register("/sw.js").then(function (reg) {
+                console.log("Service worker has been registered for scope: " + reg.scope);
+            });
+        }
         function checkScreenSize() {
             let window_size = parseInt($(window).width());
             let mark = parseInt(992)

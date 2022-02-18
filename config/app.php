@@ -182,6 +182,7 @@ return [
         // Spatie\QueryBuilder\QueryBuilderServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        Ladumor\LaravelPwa\PWAServiceProvider::class,
     ],
 
     /*
@@ -244,6 +245,7 @@ return [
         // 'QueryBuilder' => Spatie\QueryBuilder\QueryBuilder::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'FastExcel' => Rap2hpoutre\FastExcel\Facades\FastExcel::class,
+        'LaravelPwa' => \Ladumor\LaravelPwa\LaravelPwa::class,
     ],
 
 ];
