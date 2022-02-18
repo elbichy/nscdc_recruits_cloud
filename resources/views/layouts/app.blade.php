@@ -7,7 +7,7 @@
     <title>
         {{ env('APP_NAME') }}@isset($title) - {{ $title }}@endisset
     </title>
-    <link rel="shortcut icon" href="{{ asset('storage/fav.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('storage/fav.ico') }}">
 
     <style>
         :root {

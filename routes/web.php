@@ -34,7 +34,7 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name
 
 Route::group(['prefix' => 'dashboard'], function (){
 	Route::get('charts', function(){
-		return 'Yeah!';
+		return view('dashboard.charts');
 	});
 	Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 	
