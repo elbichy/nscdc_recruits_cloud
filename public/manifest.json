@@ -1,5 +1,5 @@
 {
-    "name": "NSCDC PERSONNEL DATABASE",
+    "name": "NSCDC Personnel Database",
     "short_name": "NSCDC DB",
     "start_url": "/index.php",
     "background_color": "#FF0400",
@@ -7,13 +7,18 @@
     "display": "standalone",
     "theme_color": "#164f6b",
     "icons": [{
+            "src": "icon300.png",
+            "sizes": "300x300",
+            "type": "image/png"
+        },
+        {
             "src": "icon512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "icon300.png",
-            "sizes": "300x300",
+            "src": "icon800.png",
+            "sizes": "800x800",
             "type": "image/png"
         }
 
