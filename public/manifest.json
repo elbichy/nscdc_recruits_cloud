@@ -1,26 +1,31 @@
 {
-    "name": "NSCDC PERSONNEL DATABASE",
-    "short_name": "NSCDC DB",
-    "start_url": "/index.php",
-    "background_color": "#164f6b",
-    "description": "Nigeria Security & Civil Defence Corps Personnel Database",
-    "display": "standalone",
     "theme_color": "#164f6b",
+    "background_color": "#164f6b",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/index.php",
+    "name": "NSCDC Personnel Database",
+    "short_name": "NSCDC DB",
+    "description": "Database of NSCDC Personnel",
     "icons": [{
-            "src": "icon300.png",
-            "sizes": "300x300",
+            "src": "storage/icons/icon-192x192.png",
+            "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "icon512.png",
+            "src": "/storage/icons/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/storage/icons/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/storage/icons/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
-        },
-        {
-            "src": "icon800.png",
-            "sizes": "800x800",
-            "type": "image/png"
         }
-
     ]
 }
