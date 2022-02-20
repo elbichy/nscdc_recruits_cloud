@@ -1468,7 +1468,7 @@
 					</div>
 
 					{{-- MENU COLLECTION --}}
-					<div class="fixed-action-btn">
+					<div class="fixed-action-btn click-to-toggle">
 						<a class="btn-floating btn-large waves-effect waves-light blue darken-3">
 							<i class="large material-icons">more_vert</i>
 						</a>
@@ -1533,7 +1533,8 @@
 			});
 
 			$('.fixed-action-btn').floatingActionButton({
-				direction: 'left'
+				direction: 'top',
+				hoverEnabled: false
 			});
 			
 			$('.modal').modal({
