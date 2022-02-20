@@ -4,7 +4,7 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/index.php",
-    "name": "NSCDC Personnel Database",
+    "name": "Nigeria Security & Civil Defence Corps Corps - Personnel Database",
     "short_name": "NSCDC DB",
     "description": "Database of NSCDC Personnel",
     "icons": [{
