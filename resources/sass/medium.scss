@@ -196,6 +196,8 @@
                             background: #fff;
                             position: relative;
                             top: 16px;
+                            max-height: 260px;
+                            overflow-y: scroll;
                             p {
                                 display: block;
                                 color: #666;

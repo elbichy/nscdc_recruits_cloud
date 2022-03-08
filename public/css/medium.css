@@ -179,6 +179,8 @@ input {
     background: #fff;
     position: relative;
     top: 16px;
+    max-height: 260px;
+    overflow-y: scroll;
   }
   body .app nav .nav-wrapper .search_wrapper span p {
     display: block;
