@@ -215,8 +215,18 @@
                                 background-color: #fff;
                                 border-bottom: 1px solid #eee;
                                 padding: 0 8px;
+                                display: flex;
+                                align-items: center;
                                 &:hover {
                                     background-color: #eee;
+                                }
+                                img {
+                                    width: 50px;
+                                    height: 50px;
+                                    border-radius: 50%;
+                                    border: 2px solid #eee;
+                                    background-color: #eee;
+                                    margin-right: 8px;
                                 }
                             }
                         }
