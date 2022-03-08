@@ -119,7 +119,7 @@
         }
 
         function search(event){
-
+            let passport;
             let value = event.currentTarget.value.length > 0 ? event.currentTarget.value : false
             if(value.length > 0 || event.keyCode == 8 || event.keyCode == 46){
                 axios.get(`/dashboard/personnel/search/${value}`).then((res) => {
@@ -130,7 +130,14 @@
                     // $('.results').append(`<p>${result.length} record(s) found.</p>`)
                     let rows = `<p disabled>${result.length} records found!</p>`
                     result.forEach((value, index, array) => {
-                        rows +=`<a href="/dashboard/personnel/${value.id}/show">${value.name}</a>`
+
+                        passport = value.passport == null ? "/storage/avaterMale.jpg" : `/storage/documents/${value.service_number}/passport/${value.passport}`
+                        console.log(passport);
+                        rows +=`
+                        <a href="/dashboard/personnel/${value.id}/show">
+                            <img src="${passport}" alt="pic"/>
+                            ${value.name}
+                        </a>`
                     })
                     $('.results').html(rows)
                 })
