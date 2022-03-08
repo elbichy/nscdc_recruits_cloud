@@ -136,7 +136,7 @@
                         rows +=`
                         <a href="/dashboard/personnel/${value.id}/show">
                             <img src="${passport}" alt="pic"/>
-                            <p>${value.name}</p>
+                            <div>${value.name}</div>
                         </a>`
                     })
                     $('.results').html(rows)
