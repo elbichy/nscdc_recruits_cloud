@@ -172,7 +172,7 @@ input {
     outline: none;
     color: #fff;
   }
-  body .app nav .nav-wrapper .search_wrapper span {
+  body .app nav .nav-wrapper .search_wrapper #results {
     width: 100%;
     display: none;
     flex-direction: column;
@@ -182,13 +182,13 @@ input {
     max-height: 260px;
     overflow-y: scroll;
   }
-  body .app nav .nav-wrapper .search_wrapper span p {
+  body .app nav .nav-wrapper .search_wrapper #results p {
     display: block;
     color: #666;
     border-bottom: 1px solid #eee;
     padding: 0 8px;
   }
-  body .app nav .nav-wrapper .search_wrapper span a {
+  body .app nav .nav-wrapper .search_wrapper #results a {
     display: block;
     width: 100%;
     color: #1063a7;
@@ -199,10 +199,10 @@ input {
     display: flex;
     align-items: center;
   }
-  body .app nav .nav-wrapper .search_wrapper span a:hover {
+  body .app nav .nav-wrapper .search_wrapper #results a:hover {
     background-color: #eee;
   }
-  body .app nav .nav-wrapper .search_wrapper span a img {
+  body .app nav .nav-wrapper .search_wrapper #results a img {
     width: 50px;
     height: 50px;
     border-radius: 50%;

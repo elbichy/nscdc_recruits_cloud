@@ -243,7 +243,7 @@ input {
     outline: none;
     box-shadow: none;
   }
-  .app #space-for-sidenav nav .nav-wrapper .search_wrapper span {
+  .app #space-for-sidenav nav .nav-wrapper .search_wrapper #results {
     width: 100%;
     display: none;
     flex-direction: column;
@@ -253,13 +253,13 @@ input {
     max-height: 260px;
     overflow-y: scroll;
   }
-  .app #space-for-sidenav nav .nav-wrapper .search_wrapper span p {
+  .app #space-for-sidenav nav .nav-wrapper .search_wrapper #results p {
     display: block;
     color: #666;
     border-bottom: 1px solid #eee;
     padding: 0 8px;
   }
-  .app #space-for-sidenav nav .nav-wrapper .search_wrapper span a {
+  .app #space-for-sidenav nav .nav-wrapper .search_wrapper #results a {
     display: block;
     width: 100%;
     color: #1063a7;
@@ -270,10 +270,10 @@ input {
     display: flex;
     align-items: center;
   }
-  .app #space-for-sidenav nav .nav-wrapper .search_wrapper span a:hover {
+  .app #space-for-sidenav nav .nav-wrapper .search_wrapper #results a:hover {
     background-color: #eee;
   }
-  .app #space-for-sidenav nav .nav-wrapper .search_wrapper span a img {
+  .app #space-for-sidenav nav .nav-wrapper .search_wrapper #results a img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
