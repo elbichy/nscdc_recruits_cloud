@@ -123,8 +123,8 @@
             let value = event.currentTarget.value.length > 0 ? event.currentTarget.value : false
             if(value.length > 0 || event.keyCode == 8 || event.keyCode == 46){
                 axios.get(`/dashboard/personnel/search/${value}`).then((res) => {
-                    // console.log(res);
-                    let result = res.data.data
+                    // console.log(res.data);
+                    let result = res.data
 
                     $('.results').css('display', 'flex')
                     // $('.results').append(`<p>${result.length} record(s) found.</p>`)
