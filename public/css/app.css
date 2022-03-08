@@ -281,6 +281,9 @@ input {
     background-color: #eee;
     margin-right: 8px;
   }
+  .app #space-for-sidenav nav .nav-wrapper .search_wrapper #results a span {
+    white-space: nowrap;
+  }
   .app #space-for-sidenav nav .nav-wrapper ul {
     justify-self: flex-end;
     margin-left: auto;

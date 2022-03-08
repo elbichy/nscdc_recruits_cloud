@@ -217,6 +217,9 @@ input {
     background-color: #eee;
     margin-right: 8px;
   }
+  body .app nav .nav-wrapper .search_wrapper #results a span {
+    white-space: nowrap;
+  }
   body .app nav .nav-wrapper #show-side-nav {
     height: 100%;
     float: left;
