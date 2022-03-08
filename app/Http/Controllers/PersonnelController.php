@@ -624,7 +624,7 @@ class PersonnelController extends Controller
     {
         $result = User::where('service_number', 'LIKE', '%'.$search_value.'%')
         ->orWhere('name', 'LIKE', '%'.$search_value.'%')
-        ->paginate(3);
+        ->get(3);
         return response()->json($result);
     }
 
