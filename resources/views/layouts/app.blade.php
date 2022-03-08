@@ -132,7 +132,7 @@
                     result.forEach((value, index, array) => {
 
                         passport = value.passport == null ? "/storage/avaterMale.jpg" : `/storage/documents/${value.service_number}/passport/${value.passport}`
-                        console.log(passport);
+                        // console.log(passport);
                         rows +=`
                         <a href="/dashboard/personnel/${value.id}/show">
                             <img src="${passport}" alt="pic"/>
