@@ -66,7 +66,7 @@
     <link rel="stylesheet" href="{{asset('css/small.css')}}">
     <link rel="stylesheet" href="{{asset('css/minimal.css')}}">
 </head>
-<body>
+<body onbeforeunload="return leaving_page()">
     <div class="app" id="app">
 
         {{-- Navbar goes here --}}
@@ -150,6 +150,11 @@
             }
         }
 
+        function leaving_page(){
+            Pace.restart()
+        }
+       
+
         $(document).ready(function() {
 
             $(document).on('click','.btn-floating', function(e) { pace.start(); });
@@ -165,9 +170,9 @@
                 search(event)
             })
 
-            $('a').click(function(e) {
-                Pace.restart()
-            });
+            // $('a').click(function(e) {
+            //     Pace.restart()
+            // });
 
             $('body').click(function(evt){    
                 if(evt.target.id == "results")
