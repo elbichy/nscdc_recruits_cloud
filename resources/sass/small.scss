@@ -179,8 +179,8 @@
                             padding: 6px;
                             background: rgba(0, 0, 0, 0.1);
                             border-radius: 3px;
-                            position: absolute;
-                            top: 52px;
+                            position: relative;
+                            top: 10px;
                             input {
                                 margin: 0;
                                 border: none;
@@ -199,8 +199,8 @@
                             display: none;
                             flex-direction: column;
                             background: #fff;
-                            position: relative;
-                            top: 16px;
+                            position: absolute;
+                            top: 52px;
                             width: 250px;
                             max-height: 285px;
                             overflow-y: scroll;
