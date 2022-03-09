@@ -169,6 +169,7 @@
                     display: flex;
                     justify-content: space-between;
                     .search_wrapper {
+                        position: relative;
                         div {
                             width: 190px;
                             height: 35px;
@@ -178,8 +179,8 @@
                             padding: 6px;
                             background: rgba(0, 0, 0, 0.1);
                             border-radius: 3px;
-                            position: relative;
-                            top: 10px;
+                            position: absolute;
+                            top: 52px;
                             input {
                                 margin: 0;
                                 border: none;
