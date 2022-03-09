@@ -43,6 +43,13 @@
     <script src="{{asset('js/lightbox.js')}}"></script>
     <script src="{{asset('materialize-css/js/materialize.min.js')}}"></script>
     <script src="{{ asset('js/vue.min.js') }}"></script>
+    <script>
+        window.paceOptions = {
+            ajax: false, // disabled
+            restartOnRequestAfter: false
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     
 
     <link href="{{ asset('fontawesome/css/all.css') }}" rel="stylesheet"> <!-- font-awesome -->
@@ -57,7 +64,6 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/medium.css')}}">
     <link rel="stylesheet" href="{{asset('css/small.css')}}">
-    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <link rel="stylesheet" href="{{asset('css/minimal.css')}}">
 </head>
 <body>
@@ -146,6 +152,8 @@
 
         $(document).ready(function() {
 
+            $(document).on('click','.btn-floating', function(e) { pace.start(); });
+
             $('.search_wrapper > div > i').click(function(){
                 $('.search_wrapper > div > input').focus()
             })
@@ -156,6 +164,10 @@
             $('.search_wrapper > div > input').focus(function(event){
                 search(event)
             })
+
+            $('a').click(function(e) {
+                Pace.restart()
+            });
 
             $('body').click(function(evt){    
                 if(evt.target.id == "results")
