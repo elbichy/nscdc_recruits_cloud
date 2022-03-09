@@ -79,11 +79,13 @@
     <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
     <script src="{{ asset('/sw.js') }}"></script>
     <script>
+        
         if (!navigator.serviceWorker.controller) {
             navigator.serviceWorker.register("/sw.js").then(function (reg) {
                 console.log("Service worker has been registered for scope: " + reg.scope);
             });
         }
+
         function checkScreenSize() {
             let window_size = parseInt($(window).width());
             let mark = parseInt(992)
@@ -127,7 +129,15 @@
         function search(event){
             let passport;
             let value = event.currentTarget.value.length > 0 ? event.currentTarget.value : false
-            if(value.length > 0 || event.keyCode == 8 || event.keyCode == 46){
+            console.log(value);
+            if(value == false){
+                $('.results').css('display', 'hidden')
+            }else{
+                $('.results').css('display', 'flex')
+                $('.results').html(`<p disabled>Type ${3 - value.length} more characters</p>`)
+            }
+
+            if(value.length > 2){
                 axios.get(`/dashboard/personnel/search/${value}`).then((res) => {
                     // console.log(res.data);
                     let result = res.data
@@ -136,7 +146,6 @@
                     // $('.results').append(`<p>${result.length} record(s) found.</p>`)
                     let rows = `<p disabled>${result.length} records found!</p>`
                     result.forEach((value, index, array) => {
-
                         passport = value.passport == null ? "/storage/avaterMale.jpg" : `/storage/documents/${value.service_number}/passport/${value.passport}`
                         // console.log(passport);
                         rows +=`
@@ -153,7 +162,6 @@
         function leaving_page(){
             Pace.restart()
         }
-       
 
         $(document).ready(function() {
 
@@ -164,11 +172,12 @@
             })
 
             $('.search_wrapper > div > input').keyup(function(event){
+                // console.log(event);
                 search(event)
             })
-            $('.search_wrapper > div > input').focus(function(event){
-                search(event)
-            })
+            // $('.search_wrapper > div > input').focus(function(event){
+            //     search(event)
+            // })
 
             // $('a').click(function(e) {
             //     Pace.restart()
@@ -235,6 +244,7 @@
             })
 
         })
+
     </script>
     @stack('scripts')
 </body>
