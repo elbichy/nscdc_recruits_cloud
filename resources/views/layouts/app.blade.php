@@ -131,32 +131,35 @@
             let value = event.currentTarget.value.length > 0 ? event.currentTarget.value : false
             console.log(value);
             if(value == false){
-                $('.results').css('display', 'hidden')
+                $('.results').css('display', 'none')
+                $('.results').html(`<p disabled>Type ${3} more characters</p>`)
             }else{
                 $('.results').css('display', 'flex')
                 $('.results').html(`<p disabled>Type ${3 - value.length} more characters</p>`)
-            }
 
-            if(value.length > 2){
-                axios.get(`/dashboard/personnel/search/${value}`).then((res) => {
-                    // console.log(res.data);
-                    let result = res.data
+                if(value.length > 2){
+                    axios.get(`/dashboard/personnel/search/${value}`).then((res) => {
+                        // console.log(res.data);
+                        let result = res.data
 
-                    $('.results').css('display', 'flex')
-                    // $('.results').append(`<p>${result.length} record(s) found.</p>`)
-                    let rows = `<p disabled>${result.length} records found!</p>`
-                    result.forEach((value, index, array) => {
-                        passport = value.passport == null ? "/storage/avaterMale.jpg" : `/storage/documents/${value.service_number}/passport/${value.passport}`
-                        // console.log(passport);
-                        rows +=`
-                        <a href="/dashboard/personnel/${value.id}/show">
-                            <img src="${passport}" alt="pic"/>
-                            <span>${value.name}</span>
-                        </a>`
+                        // $('.results').css('display', 'flex')
+                        // $('.results').append(`<p>${result.length} record(s) found.</p>`)
+                        let rows = `<p disabled>${result.length} records found!</p>`
+                        result.forEach((value, index, array) => {
+                            passport = value.passport == null ? "/storage/avaterMale.jpg" : `/storage/documents/${value.service_number}/passport/${value.passport}`
+                            // console.log(passport);
+                            rows +=`
+                            <a href="/dashboard/personnel/${value.id}/show">
+                                <img src="${passport}" alt="pic"/>
+                                <span>${value.name}</span>
+                            </a>`
+                        })
+                        $('.results').html(rows)
                     })
-                    $('.results').html(rows)
-                })
+                }
             }
+
+            
         }
 
         function leaving_page(){
@@ -172,16 +175,11 @@
             })
 
             $('.search_wrapper > div > input').keyup(function(event){
-                // console.log(event);
                 search(event)
             })
-            // $('.search_wrapper > div > input').focus(function(event){
-            //     search(event)
-            // })
-
-            // $('a').click(function(e) {
-            //     Pace.restart()
-            // });
+            $('.search_wrapper > div > input').focus(function(event){
+                search(event)
+            })
 
             $('body').click(function(evt){    
                 if(evt.target.id == "results")
