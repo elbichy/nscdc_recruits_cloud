@@ -158,7 +158,6 @@ input {
     border-radius: 3px;
     position: relative;
     top: 10px;
-    width: 200px;
   }
   body .app nav .nav-wrapper .search_wrapper div input {
     margin: 0;
