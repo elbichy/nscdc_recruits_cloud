@@ -197,6 +197,7 @@ input {
   }
   body .app nav .nav-wrapper .search_wrapper #results li i {
     margin-left: 6px;
+    height: auto;
   }
   body .app nav .nav-wrapper .search_wrapper #results p {
     display: block;
