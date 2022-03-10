@@ -86,6 +86,10 @@
             });
         }
 
+        function leaving_page(){
+            Pace.restart()
+        }
+
         function checkScreenSize() {
             let window_size = parseInt($(window).width());
             let mark = parseInt(992)
@@ -129,15 +133,19 @@
         function search(event){
             let passport;
             let value = event.currentTarget.value.length > 0 ? event.currentTarget.value : false
-            console.log(value);
+           
             if(value == false){
                 $('.results').css('display', 'none')
-                $('.results').html(`<p disabled>Type ${3} more characters</p>`)
             }else{
                 $('.results').css('display', 'flex')
-                $('.results').html(`<p disabled>Type ${3 - value.length} more characters</p>`)
-
+                
                 if(value.length > 2){
+                    $('.results').html(`
+                        <li class="loading-wrap">
+                            <div class="loading">Loading</div>
+                            <i class="fad fa-circle-notch fa-lg fa-spin"></i>
+                        </li>
+                    `)
                     axios.get(`/dashboard/personnel/search/${value}`).then((res) => {
                         // console.log(res.data);
                         let result = res.data
@@ -156,14 +164,12 @@
                         })
                         $('.results').html(rows)
                     })
+                }else{
+                    $('.results').html(`<p disabled>Type ${3 - value.length} more characters</p>`)
                 }
             }
 
             
-        }
-
-        function leaving_page(){
-            Pace.restart()
         }
 
         $(document).ready(function() {

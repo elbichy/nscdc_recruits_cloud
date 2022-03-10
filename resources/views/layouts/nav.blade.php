@@ -40,7 +40,7 @@
                 @endif
             </div>
             <div class="search_wrapper">
-                <div>
+                <div class="input_wrap">
                     <input type="text" name="search" id="search" placeholder="Search">
                     <i class="material-icons">search</i>
                 </div>

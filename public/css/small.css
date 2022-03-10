@@ -157,7 +157,7 @@ input {
   body .app nav .nav-wrapper .search_wrapper {
     position: relative;
   }
-  body .app nav .nav-wrapper .search_wrapper div {
+  body .app nav .nav-wrapper .search_wrapper .input_wrap {
     width: 190px;
     height: 35px;
     display: flex;
@@ -169,13 +169,13 @@ input {
     position: relative;
     top: 10px;
   }
-  body .app nav .nav-wrapper .search_wrapper div input {
+  body .app nav .nav-wrapper .search_wrapper .input_wrap input {
     margin: 0;
     border: none;
     outline: none;
     color: #fff;
   }
-  body .app nav .nav-wrapper .search_wrapper div input:focus {
+  body .app nav .nav-wrapper .search_wrapper .input_wrap input:focus {
     margin: 0;
     border: none;
     outline: none;
@@ -194,6 +194,16 @@ input {
     box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.3);
+  }
+  body .app nav .nav-wrapper .search_wrapper #results li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    height: 70px;
+  }
+  body .app nav .nav-wrapper .search_wrapper #results li i {
+    margin-left: 6px;
   }
   body .app nav .nav-wrapper .search_wrapper #results p {
     display: block;
