@@ -137,9 +137,9 @@
             if(value == false){
                 $('.results').css('display', 'none')
             }else{
-                $('.results').css('display', 'flex')
                 
                 if(value.length > 2){
+                    
                     $('.results').html(`
                         <li class="loading-wrap">
                             <div class="loading">Loading</div>
@@ -150,7 +150,7 @@
                         // console.log(res.data);
                         let result = res.data
 
-                        // $('.results').css('display', 'flex')
+                        $('.results').css('display', 'flex')
                         // $('.results').append(`<p>${result.length} record(s) found.</p>`)
                         let rows = `<p disabled>${result.length} records found!</p>`
                         result.forEach((value, index, array) => {
@@ -165,6 +165,8 @@
                         $('.results').html(rows)
                     })
                 }else{
+                    console.log(value);
+                    $('.results').css('display', 'flex')
                     $('.results').html(`<p disabled>Type ${3 - value.length} more characters</p>`)
                 }
             }
