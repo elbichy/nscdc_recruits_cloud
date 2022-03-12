@@ -165,7 +165,7 @@
                         $('.results').html(rows)
                     })
                 }else{
-                    console.log(value);
+                    // console.log(value);
                     $('.results').css('display', 'flex')
                     $('.results').html(`<p disabled>Type ${3 - value.length} more characters</p>`)
                 }
@@ -189,11 +189,17 @@
                 search(event)
             })
 
-            $('body').click(function(evt){    
+            $('body').click(function(evt){
+                // console.log(evt);
                 if(evt.target.id == "results")
                     return;
                 //For descendants of menu_content being clicked, remove this check if you do not want to put constraint on descendants.
                 if($(evt.target).closest('#results').length)
+                    return;             
+                if(evt.target.id == "search")
+                    return;
+                //For descendants of menu_content being clicked, remove this check if you do not want to put constraint on descendants.
+                if($(evt.target).closest('#search').length)
                     return;             
 
                 //Do processing of click event here for every element except with id menu_content
