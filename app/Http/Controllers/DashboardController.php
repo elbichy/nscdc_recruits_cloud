@@ -51,7 +51,7 @@ class DashboardController extends Controller
         ]);
 
         $marital_status = [];
-        return $ms = User::whereDate('dofa', '=', '2022-01-31')->distinct()->pluck('marital_status');
+        $ms = User::whereDate('dofa', '=', '2022-01-31')->distinct()->pluck('marital_status');
         
         foreach($ms as $status){
             $marital_status[ucfirst($status)] = User::where('marital_status', $status)->count();
