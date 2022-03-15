@@ -206,7 +206,6 @@
                 $('.results').css('display', 'none')
             });
 
-            
             $('.sidenav').sidenav();
             $('.collapsible').collapsible()
             $('.dropdown-trigger').dropdown()

@@ -51,11 +51,14 @@ class DashboardController extends Controller
         ]);
 
         $marital_status = [];
-        $ms = User::whereDate('dofa', '=', '2022-01-31')->distinct()->pluck('marital_status');
+        return $ms = User::whereDate('dofa', '=', '2022-01-31')->distinct()->pluck('marital_status');
+        
         foreach($ms as $status){
-            $marital_status[$status] = User::where('marital_status', $status)->count();
+            $marital_status[ucfirst($status)] = User::where('marital_status', $status)->count();
         }
-        $marital_status = collect($marital_status);
+
+        return $marital_status = collect($marital_status);
+
         $maritalStatusChart = new MaritalStatusChart;
         $maritalStatusChart->labels($marital_status->keys());
         $maritalStatusChart->dataset('Rank', 'pie', $marital_status->values())->options([
