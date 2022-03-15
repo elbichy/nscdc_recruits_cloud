@@ -57,7 +57,7 @@ class DashboardController extends Controller
             $marital_status[ucfirst($status)] = User::where('marital_status', $status)->count();
         }
 
-        return $marital_status = collect($marital_status);
+        $marital_status = collect($marital_status);
 
         $maritalStatusChart = new MaritalStatusChart;
         $maritalStatusChart->labels($marital_status->keys());
