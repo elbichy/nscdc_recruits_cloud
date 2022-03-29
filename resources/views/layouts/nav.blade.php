@@ -126,23 +126,23 @@
         {{-- DEPLOYMENTS --}}
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
-            <li class="{{ request()->segment(3) == 'redeployment' ? 'active' : '' }}">
+            <li class="{{ request()->segment(2) == 'redeployment' ? 'active' : '' }}">
                 <a style="padding:0 32px;" class="collapsible-header">
                     <i class="fal fa-people-arrows fa-2x"></i>DEPLOYMENTS<i class="material-icons right">arrow_drop_down</i>
                 </a>
                 <div class="collapsible-body">
                 <ul>
-                    <li class="{{(request()->segment(4) == 'create') ? 'active' : ''}}">
-                        <a href="#">Add new</a>
+                    <li class="{{(request()->segment(3) == 'create') ? 'active' : ''}}">
+                        <a href="{{ route('redeployment_create') }}">Create new</a>
                     </li>
-                    <li class="{{(request()->segment(4) == 'today') ? 'active' : ''}}">
-                        <a href="#">Today's Posting</a>
+                    <li class="{{(request()->segment(3) == 'today') ? 'active' : ''}}">
+                        <a href="{{ route('redeployment_today') }}">Today's Posting</a>
                     </li>
-                    <li class="{{(request()->segment(4) == 'all') ? 'active' : ''}}">
-                        <a href="#">All Postings</a>
+                    <li class="{{(request()->segment(3) == 'all') ? 'active' : ''}}">
+                        <a href="{{ route('redeployment_all') }}">All Postings</a>
                     </li>
-                    <li class="{{(request()->segment(4) == 'reversed') ? 'active' : ''}}">
-                        <a href="#">Trashed Postings</a>
+                    <li class="{{(request()->segment(3) == 'reversed') ? 'active' : ''}}">
+                        <a href="{{ route('redeployment_trash') }}">Trashed Postings</a>
                     </li>
                 </ul>
                 </div>

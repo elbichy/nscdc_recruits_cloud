@@ -13,6 +13,7 @@ use App\Http\Controllers\PrivilageController;
 use App\Http\Controllers\ProgressionController;
 use App\Http\Controllers\QualificationController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\RedeploymentController;
 use App\Http\Controllers\SyncController;
 
 /*
@@ -114,6 +115,50 @@ Route::group(['prefix' => 'dashboard'], function (){
 		});
 		
 		Route::get('export/{type}',  [PersonnelController::class, 'export']);
+
+	});
+
+	Route::group(['prefix' => 'redeployment'], function () {
+		// CREATE/EDIT RECORDS
+		Route::get('/create',  [RedeploymentController::class, 'create'])->name('redeployment_create');
+		Route::post('/store',  [RedeploymentController::class, 'store'])->name('redeployment_store');
+		Route::post('/import/store',  [RedeploymentController::class, 'store_imported_redeployment'])->name('store_imported_redeployment');
+		Route::get('/edit/{redeployment}',  [RedeploymentController::class, 'edit'])->name('redeployment_edit');
+		Route::patch('/update/{redeployment}',  [RedeploymentController::class, 'update'])->name('redeployment_update');
+		Route::get('/check/{redeployment}',  [RedeploymentController::class, 'redeployment_check'])->name('redeployment_check_if_exist');
+		
+		// SHOW LIST OF RECORDS
+		Route::get('/today', [RedeploymentController::class, 'today'])->name('redeployment_today');
+		Route::get('/get_today', [RedeploymentController::class, 'redeployment_today'])->name('redeployment_get_today');
+		Route::get('/all', [RedeploymentController::class, 'all'])->name('redeployment_all');
+		Route::get('', [RedeploymentController::class, 'all'])->name('redeployment_all');
+		Route::get('/get_all', [RedeploymentController::class, 'redeployments'])->name('redeployment_get_all');
+		Route::get('/show/{redeployment}', [RedeploymentController::class, 'show'])->name('redeployment_show');
+		Route::get('/show/existing/{redeployment}', [RedeploymentController::class, 'show_existing'])->name('redeployment_show_existing');
+	
+		// DELETING/RESTORING RECORDS
+		Route::get('/trash', [RedeploymentController::class, 'trash'])->name('redeployment_trash');
+		Route::delete('/delete/{redeployment}', [RedeploymentController::class, 'destroy'])->name('redeployment_delete');
+		Route::get('/get_trash', [RedeploymentController::class, 'redeployment_trash'])->name('redeployment_get_trash');
+		Route::get('/trash/restore/{ref_number}', [RedeploymentController::class, 'restore'])->name('redeployment_trash_restore');
+		Route::post('/delete/bulk', [RedeploymentController::class, 'destroy_bulk'])->name('redeployment_delete_bulk');
+		Route::post('/trash/restore/bulk', [RedeploymentController::class, 'restore_bulk'])->name('redeployment_trash_restore_bulk');
+		Route::get('/trash/permanently/{ref_number}', [RedeploymentController::class, 'permanently'])->name('redeployment_trash_permanently');
+		Route::post('/trash/permanently/bulk', [RedeploymentController::class, 'permanently_bulk'])->name('redeployment_trash_permanently_bulk');
+
+		// GENERATION OF DOCS
+		Route::get('/generate_letter/{redeployment}', [RedeploymentController::class, 'generate_letter'])->name('generate_letter');
+		Route::get('/generate_letter/signed/{redeployment}', [RedeploymentController::class, 'generate_signed_letter'])->name('generate_signed_letter');
+		Route::post('/signal/generate', [RedeploymentController::class, 'generate_signal'])->name('generate_signal');
+		Route::post('/generate_letter/bulk', [RedeploymentController::class, 'generate_bulk_redeployment_letter'])->name('generate_bulk_redeployment_letter');
+
+		// CLOUD SYNCHRONIZATION
+		Route::get('/trash/cloud/{ref_number}', [RedeploymentController::class, 'trash_cloud'])->name('redeployment_trash_cloud');
+		Route::post('/trash/cloud/bulk', [RedeploymentController::class, 'trash_cloud_bulk'])->name('redeployment_trash_cloud_bulk');
+				
+		Route::get('/sync/{ref_number}', [RedeploymentController::class, 'single_cloud_upload'])->name('redeployment_sync');
+		Route::post('/sync/bulk/', [RedeploymentController::class, 'bulk_cloud_upload'])->name('bulk_sync');
+		Route::get('/download', [RedeploymentController::class, 'cloud_download'])->name('cloud_download');
 
 	});
 

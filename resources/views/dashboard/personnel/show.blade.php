@@ -405,7 +405,9 @@
 								@if ($personnel->passport == NULL)
 									<img src="{{ asset('storage/avaterMale.jpg') }}" alt="Profile Pic" width="100%">
 								@else
-									<img src="{{ asset('storage/documents/'.$personnel->service_number.'/passport/'.$personnel->passport) }}" alt="Profile Pic" width="100%">
+									<a href="{{ asset('storage/documents/'.$personnel->service_number.'/passport/'.$personnel->passport) }}" data-lightbox="passport">
+										<img src="{{ asset('storage/documents/'.$personnel->service_number.'/passport/'.$personnel->passport) }}" alt="Profile Pic" width="100%">
+									</a>
 								@endif
 							</div>
 							@if(auth()->user()->can('edit personnel') || auth()->user()->hasRole('super admin'))
