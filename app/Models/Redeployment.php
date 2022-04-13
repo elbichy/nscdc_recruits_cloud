@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Redeployment extends Model
 {
     use SoftDeletes;
+
+    protected $connection = 'mysql2';
     protected $guarded = [];
 
     public function setFullnameAttribute($value)

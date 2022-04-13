@@ -13,7 +13,7 @@ class CreateRedeploymentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('redeployments', function (Blueprint $table) {
+        Schema::connection('mysql2')->create('redeployments', function (Blueprint $table) {
             $table->unsignedBigInteger('id')->autoIncrement();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('admin_id');
@@ -44,6 +44,6 @@ class CreateRedeploymentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('redeployments');
+        Schema::connection('mysql2')->dropIfExists('redeployments');
     }
 }
