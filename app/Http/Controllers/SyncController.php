@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Formation;
 use App\Models\Rank;
+use App\Models\Redeployment;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
@@ -19,7 +20,7 @@ class SyncController extends Controller
 
     // GET ALL UNSYNCHED PERSONNEL
 
-    public function store(Request $request){
+    public function store_new_personnel(Request $request){
 
         try {
             $personnel = User::updateOrCreate(
@@ -146,4 +147,40 @@ class SyncController extends Controller
             return response()->json(['status'=> false, 'message'=> $e->getMessage()]);
         }
     }
+
+    public function store_redeployment(Request $request){
+
+        try {
+           
+            $redeployment = Redeployment::updateOrInsert(
+                ['ref_number' =>   $request->record['ref_number']],
+                [
+                    'user_id' =>   $request->record['user_id'],
+                    'type' =>   $request->record['type'],
+                    'fullname' =>   $request->record['fullname'],
+                    'service_number' =>   $request->record['service_number'],
+                    'file_number' =>   $request->record['file_number'],
+                    'ref_number' =>   $request->record['ref_number'],
+                    'rank' =>   $request->record['rank'],
+                    'from' =>   $request->record['from'],
+                    'to' =>   $request->record['to'],
+                    'designation' =>   $request->record['designation'],
+                    'reason' =>   $request->record['reason'],
+                    'signatory' =>   $request->record['signatory'],
+                    'financial_implication' =>   $request->record['financial_implication'],
+                    'barcode' =>   $request->record['barcode'],
+                    'synched' =>   $request->record['synched'],
+                    'created_at' =>  $request->record['created_at'],
+                    'updated_at' =>  $request->record['updated_at']
+                ]
+            );
+            return response()->json(['status'=> true, 'redeployment'=> $redeployment]);
+
+        }
+        catch(Exception $e){
+            return response()->json(['status'=> false, 'message'=> $e->getMessage()]);
+        }
+    }
+
+    
 }

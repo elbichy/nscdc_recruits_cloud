@@ -22,4 +22,6 @@ Route::get('/get-lgoo/{id}', function($id) {
 	return response()->json($data);
 })->name('get_lgas');
 
-Route::post('/personnel/sync', [SyncController::class, 'store'])->name('user_sync');
+Route::post('/personnel/sync', [SyncController::class, 'store_new_personnel'])->name('user_sync');
+
+Route::post('/verification/redeployment/sync', [SyncController::class, 'store_redeployment'])->name('redeployment_sync');
