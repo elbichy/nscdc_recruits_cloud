@@ -149,7 +149,7 @@ class SyncController extends Controller
     }
 
     public function store_redeployment(Request $request){
-
+        return $request;
         try {
            
             $redeployment = Redeployment::updateOrInsert(
