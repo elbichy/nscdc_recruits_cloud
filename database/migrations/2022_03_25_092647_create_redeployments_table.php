@@ -16,7 +16,7 @@ class CreateRedeploymentsTable extends Migration
         Schema::connection('mysql2')->create('redeployments', function (Blueprint $table) {
             $table->unsignedBigInteger('id')->autoIncrement();
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('admin_id');
+            $table->unsignedBigInteger('admin_id')->nullable();
             $table->string('type');
             $table->string('fullname');
             $table->unsignedBigInteger('service_number');
