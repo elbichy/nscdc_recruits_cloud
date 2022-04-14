@@ -151,7 +151,7 @@ class SyncController extends Controller
     public function store_redeployment(Request $request){
         
         try {
-           
+            $rank = Rank::where('short_title', $request->record['rank'])->first();
             $redeployment = Redeployment::updateOrInsert(
                 ['ref_number' =>   $request->record['ref_number']],
                 [
@@ -160,11 +160,13 @@ class SyncController extends Controller
                     'fullname' =>   $request->record['fullname'],
                     'service_number' =>   $request->record['service_number'],
                     'ref_number' =>   $request->record['ref_number'],
-                    'rank' =>   $request->record['rank'],
+                    'rank' =>   $rank,
+                    'rank_acronym' => $request->record['rank'],
                     'from' =>   $request->record['from'],
                     'to' =>   $request->record['to'],
                     'designation' =>   $request->record['designation'],
                     'reason' =>   $request->record['reason'],
+                    'incharge' => $request->record['incharge'],
                     'signatory' =>   $request->record['signatory'],
                     'financial_implication' =>   $request->record['financial_implication'],
                     'barcode' =>   $request->record['barcode'],
