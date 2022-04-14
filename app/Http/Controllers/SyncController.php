@@ -6,6 +6,7 @@ use App\Models\Formation;
 use App\Models\Rank;
 use App\Models\Redeployment;
 use App\Models\User;
+use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -171,8 +172,8 @@ class SyncController extends Controller
                     'financial_implication' =>   $request->record['financial_implication'],
                     'barcode' =>   $request->record['barcode'],
                     'synched' =>   $request->record['synched'],
-                    'created_at' =>  $request->record['created_at'],
-                    'updated_at' =>  $request->record['updated_at']
+                    'created_at' =>  Carbon::createFromFormat('Y-m-d H:i:s', $request->record['created_at'])->format('Y-m-d H:i:s'),
+                    'updated_at' =>  Carbon::createFromFormat('Y-m-d H:i:s', $request->record['updated_at'])->format('Y-m-d H:i:s')
                 ]
             );
             return response()->json(['status'=> true, 'redeployment'=> $redeployment]);
