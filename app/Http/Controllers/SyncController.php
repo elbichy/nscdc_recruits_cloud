@@ -172,8 +172,8 @@ class SyncController extends Controller
                     'financial_implication' =>   $request->record['financial_implication'],
                     'barcode' =>   $request->record['barcode'],
                     'synched' =>   $request->record['synched'],
-                    'created_at' =>  Carbon::createFromFormat('Y-m-d H:i:s', $request->record['created_at'])->format('Y-m-d H:i:s'),
-                    'updated_at' =>  Carbon::createFromFormat('Y-m-d H:i:s', $request->record['updated_at'])->format('Y-m-d H:i:s')
+                    'created_at' =>  Carbon::parse($request->record['created_at'])->toDateTimeString(),
+                    'updated_at' =>  Carbon::parse($request->record['updated_at'])->toDateTimeString()
                 ]
             );
             return response()->json(['status'=> true, 'redeployment'=> $redeployment]);
