@@ -159,7 +159,6 @@ class SyncController extends Controller
                     'type' =>   $request->record['type'],
                     'fullname' =>   $request->record['fullname'],
                     'service_number' =>   $request->record['service_number'],
-                    'file_number' =>   $request->record['file_number'],
                     'ref_number' =>   $request->record['ref_number'],
                     'rank' =>   $request->record['rank'],
                     'from' =>   $request->record['from'],
