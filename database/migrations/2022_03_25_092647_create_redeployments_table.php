@@ -22,7 +22,7 @@ class CreateRedeploymentsTable extends Migration
             $table->unsignedBigInteger('service_number');
             $table->string('ref_number');
             $table->string('rank');
-            $table->string('rank_acronym');
+            $table->string('rank_acronym')->nullable();
             $table->string('from');
             $table->string('to');
             $table->string('designation')->nullable();
