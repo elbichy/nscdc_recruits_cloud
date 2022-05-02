@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>
-        {{ env('APP_NAME') }} @isset($title) - {{ $title }}@endisset
+        NSCDC Admin Directorate Database @isset($title) - {{ $title }}@endisset
     </title>
     <link rel="icon" type="image/x-icon" href="{{ asset('storage/favicon.png') }}">
     <!-- PWA  -->
