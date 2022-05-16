@@ -68,7 +68,8 @@ class SyncController extends Controller
                 'pfa' => $request->user['pfa'],
                 'pen_number' => $request->user['pen_number'],
                 'current_formation' => $request->user['current_formation'],
-                'passport' => $request->user['passport']
+                'passport' => $request->user['passport'],
+                'captured_by' => $request->user['captured_by']
             ]);
 
             $formation = Formation::where('formation', $request->user['current_formation'])->first();

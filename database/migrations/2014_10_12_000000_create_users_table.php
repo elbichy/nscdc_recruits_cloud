@@ -64,6 +64,7 @@ class CreateUsersTable extends Migration
             $table->string('passport')->nullable();
             $table->integer('role')->default(0)->nullable();
             $table->boolean('synched')->default(0);
+            $table->string('captured_by')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
