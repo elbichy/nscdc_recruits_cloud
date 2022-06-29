@@ -39,8 +39,10 @@
                                 <th>Fullname</th>
                                 <th>Svc No.</th>
                                 <th>Sex</th>
+                                <th>Marital Status</th>
+                                <th>SOO</th>
                                 <th>DOB</th>
-                                <th>DOFA</th>
+                                {{-- <th>DOFA</th> --}}
                                 {{-- <th>DOPA</th> --}}
                                 <th>Rank</th>
                                 <th>Formation</th>
@@ -55,8 +57,10 @@
                                 <th>Fullname</th>
                                 <th>Svc No.</th>
                                 <th>Sex</th>
+                                <th>Marital Status</th>
+                                <th>SOO</th>
                                 <th>DOB</th>
-                                <th>DOFA</th>
+                                {{-- <th>DOFA</th> --}}
                                 {{-- <th>DOPA</th> --}}
                                 <th>Rank</th>
                                 <th>Formation</th>
@@ -113,7 +117,9 @@
                     { data: 'service_number', name: 'service_number'},
                     { data: 'sex', name: 'sex'},
                     { data: 'dob', name: 'dob'},
-                    { data: 'dofa', name: 'dofa'},
+                    { data: 'soo', name: 'soo'},
+                    { data: 'marital_status', name: 'marital_status'},
+                    // { data: 'dofa', name: 'dofa'},
                     // { data: 'dopa', name: 'dopa'},
                     { data: 'rank_short', name: 'rank_short'},
                     { data: 'current_formation', name: 'current_formation'},
