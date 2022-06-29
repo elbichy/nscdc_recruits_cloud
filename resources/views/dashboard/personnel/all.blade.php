@@ -45,7 +45,7 @@
                                 {{-- <th>DOFA</th> --}}
                                 {{-- <th>DOPA</th> --}}
                                 <th>Rank</th>
-                                <th>Formation</th>
+                                {{-- <th>Formation</th> --}}
                                 <th>Updated</th>
                                 <th>Passport</th>
                             </tr>
@@ -63,7 +63,7 @@
                                 {{-- <th>DOFA</th> --}}
                                 {{-- <th>DOPA</th> --}}
                                 <th>Rank</th>
-                                <th>Formation</th>
+                                {{-- <th>Formation</th> --}}
                                 <th>Updated</th>
                                 <th>Passport</th>
                             </tr>
@@ -122,7 +122,7 @@
                     // { data: 'dofa', name: 'dofa'},
                     // { data: 'dopa', name: 'dopa'},
                     { data: 'rank_short', name: 'rank_short'},
-                    { data: 'current_formation', name: 'current_formation'},
+                    // { data: 'current_formation', name: 'current_formation'},
                     { data: 'updated_at', name: 'updated_at'},
                     { data: 'passport', name: 'passport', "orderable": false, "searchable": false},
                 ],
